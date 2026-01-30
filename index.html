@@ -10,6 +10,7 @@
     <header>
         <h1>Carl Justin M. Cueto</h1>
         <h2>Web Developer Intern</h2>
+        <button id="themeBtn" aria-label="Toggle theme">🌙</button>
     </header>
 
     <nav>
@@ -22,13 +23,17 @@
 
     <main>
         <section>
+            <!-- About toggle -->
+            <button id="toggleAbout" aria-label="Toggle About Me">⬇️</button>
+
             <h2>About Me</h2>
-            <article>
-                <p> 
-                I am a 4th-year Computer Science student at FEU Institute of Technology.  
-                I enjoy building websites and solving problems using code.  
+
+            <article id="aboutContent">
+            <p>
+                I am a 4th-year Computer Science student at FEU Institute of Technology.
+                I enjoy building websites and solving problems using code.
                 My goal is to become a full-stack developer.
-                </p>
+            </p>
             </article>
         </section>
 
@@ -47,5 +52,8 @@
         <p>© 2026 Carl Justin Cueto</p>
         <p>LinkedIn | GitHub</p>
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

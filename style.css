@@ -52,6 +52,52 @@ nav ul li a:hover {
   background: rgba(0,0,0,0.25);
 }
 
+button {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+button:hover {
+  background: #eee;
+}
+
+/* ---------- DARK MODE ---------- */
+.dark-mode {
+  background: #121212;
+  color: #ffffff;
+}
+
+.dark-mode header {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode nav {
+  background: #bb4bd6;
+}
+
+.dark-mode section {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+.dark-mode article {
+  border-left-color: #bbb;
+}
+
+.dark-mode footer {
+  color: #aaa;
+}
+
+.dark-mode button {
+  background: #2a2a2a;
+  color: #fff;
+  border-color: #444;
+}
 
 section {
   background: #ffffff;
