@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carl Justin M. Cueto - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,14 +15,30 @@
 
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <main>
-        <section>
+        <!-- HOME SECTION -->
+        <section id="home">
+            <h2>Welcome!</h2>
+            <div class="home-content">
+                <div class="profile-photo">
+                    <img src="https://via.placeholder.com/150" alt="Carl Justin M. Cueto">
+                </div>
+                <div class="intro-text">
+                    <p>Hi! I'm Carl Justin, a passionate 4th-year Computer Science student at FEU Institute of Technology. I love creating web applications and solving real-world problems through code.</p>
+                    <p>I'm currently working towards becoming a full-stack developer and I'm excited to share my journey with you!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about">
             <!-- About toggle -->
             <button id="toggleAbout" aria-label="Toggle About Me">⬇️</button>
 
@@ -34,23 +50,95 @@
                 I enjoy building websites and solving problems using code.
                 My goal is to become a full-stack developer.
             </p>
+            <h3>Interests</h3>
+            <p>
+                I'm passionate about web development, problem-solving, and learning new technologies. 
+                I enjoy working on projects that challenge me and help me grow as a developer.
+                In my free time, I explore new frameworks and contribute to open-source projects.
+            </p>
             </article>
         </section>
 
+        <!-- TECHNICAL SKILLS SECTION -->
         <section>
-            <h2>Technical Skill</h2>
+            <h2>Technical Skills</h2>
             <ul>
-                <li>HTMl</li>
+                <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
-                <li>python</li>
+                <li>Python</li>
                 <li>MySQL</li>
             </ul>
         </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <h2>Projects</h2>
+            
+            <div class="project-card">
+                <h3>Personal Portfolio Website</h3>
+                <p><strong>Description:</strong> A responsive personal portfolio website showcasing my skills, projects, and contact information. Features include dark/light theme toggle and smooth navigation.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                <p><strong>Features:</strong> Responsive design, Theme toggle, Smooth scrolling navigation</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Student Management System</h3>
+                <p><strong>Description:</strong> A web-based application for managing student records, including enrollment, grades, and attendance tracking.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Python, MySQL</p>
+                <p><strong>Features:</strong> CRUD operations, Database integration, User authentication</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Weather Dashboard</h3>
+                <p><strong>Description:</strong> An interactive weather application that displays current weather conditions and forecasts for any location.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Weather API</p>
+                <p><strong>Features:</strong> Real-time data, Location search, Responsive UI</p>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me! I'm always open to discussing new projects, opportunities, or just having a chat about technology.</p>
+            
+            <div class="contact-info">
+                <p><strong>📧 Email:</strong> <a href="mailto:carljustin.cueto@example.com">carljustin.cueto@example.com</a></p>
+                <p><strong>🔗 LinkedIn:</strong> <a href="https://linkedin.com/in/carljustincueto" target="_blank">linkedin.com/in/carljustincueto</a></p>
+                <p><strong>💻 GitHub:</strong> <a href="https://github.com/carljustincueto" target="_blank">github.com/carljustincueto</a></p>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send me a message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+                <p id="formStatus"></p>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>© 2026 Carl Justin Cueto</p>
-        <p>LinkedIn | GitHub</p>
+        <p>&copy; 2026 Carl Justin Cueto</p>
+        <p>
+            <a href="https://linkedin.com/in/carljustincueto" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/carljustincueto" target="_blank">GitHub</a>
+        </p>
     </footer>
 
     <script src="script.js"></script>

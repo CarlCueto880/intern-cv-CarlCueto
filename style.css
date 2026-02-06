@@ -8,6 +8,7 @@ body {
   line-height: 1.6;
   background: #f5f5f5;
   color: #222;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -25,6 +26,9 @@ header {
 nav {
   background: #f369f8;
   padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav ul {
@@ -46,6 +50,7 @@ nav ul li a {
   color: #fff;
   background: rgba(0,0,0,0.15);
   border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -59,10 +64,161 @@ button {
   border-radius: 6px;
   border: 1px solid #ccc;
   background: #fff;
+  transition: background 0.3s ease;
 }
 
 button:hover {
   background: #eee;
+}
+
+/* ---------- HOME SECTION ---------- */
+.home-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f369f8;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* ---------- PROJECTS SECTION ---------- */
+.project-card {
+  background: #fafafa;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 4px solid #f369f8;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #f369f8;
+}
+
+.project-card p {
+  margin: 8px 0;
+}
+
+/* ---------- CONTACT SECTION ---------- */
+.contact-info {
+  margin-bottom: 30px;
+  padding: 15px;
+  background: #fafafa;
+  border-radius: 6px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #f369f8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #d150d6;
+  text-decoration: underline;
+}
+
+.contact-form {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.contact-form h3 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f369f8;
+}
+
+.contact-form button {
+  background: #f369f8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #d150d6;
+}
+
+#formStatus {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#formStatus.success {
+  color: green;
+}
+
+#formStatus.error {
+  color: red;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+footer a {
+  color: #f369f8;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* ---------- DARK MODE ---------- */
@@ -93,10 +249,50 @@ button:hover {
   color: #aaa;
 }
 
+.dark-mode footer a {
+  color: #bb4bd6;
+}
+
 .dark-mode button {
   background: #2a2a2a;
   color: #fff;
   border-color: #444;
+}
+
+.dark-mode .project-card {
+  background: #252525;
+  border-left-color: #bb4bd6;
+}
+
+.dark-mode .project-card h3 {
+  color: #bb4bd6;
+}
+
+.dark-mode .contact-info {
+  background: #252525;
+}
+
+.dark-mode .contact-info a {
+  color: #bb4bd6;
+}
+
+.dark-mode .contact-form {
+  background: #252525;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+  background: #1e1e1e;
+  color: #ffffff;
+  border-color: #444;
+}
+
+.dark-mode .contact-form button {
+  background: #bb4bd6;
+}
+
+.dark-mode .contact-form button:hover {
+  background: #a040b8;
 }
 
 section {
@@ -106,6 +302,7 @@ section {
   border: 1px solid #ddd;
   border-radius: 8px;
 }
+
 article {
   padding: 10px;
   border-left: 4px solid #333;
@@ -117,9 +314,52 @@ section ul {
   padding-left: 20px;
 }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  color: #666;
-  font-size: 14px;
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  nav ul li a {
+    display: block;
+    margin: 5px 10px;
+  }
+  
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-photo img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  main {
+    padding: 10px;
+  }
+  
+  header {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;
+  }
+  
+  header h2 {
+    font-size: 18px;
+  }
+  
+  .profile-photo img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .project-card {
+    padding: 12px;
+  }
 }
